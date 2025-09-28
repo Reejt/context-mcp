@@ -1,0 +1,17 @@
+# Requirements for plugins/my-plugin
+fastapi
+uvicorn
+fastmcp
+# Standard library modules (os, shutil) do not need to be listed
+# If FastMCP is a local module, provide installation instructions separately
+
+# --- Setup Guide ---
+# 1. (Optional) Create and activate a virtual environment:
+#    python -m venv venv
+#    venv\Scripts\activate   # On Windows
+# 2. Install dependencies:
+#    pip install -r requirements.txt
+# 3. If 'fastmcp' is a local module, install it with:
+#    pip install -e path/to/fastmcp
+# 4. To run the server:
+#    uvicorn plugins.my-plugin.main:app --host 0.0.0.0 --port 8000
