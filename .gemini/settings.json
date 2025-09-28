@@ -1,7 +1,11 @@
 {
   "mcpServers": {
     "context7": {
-      "url": "http://localhost:4333/events"
+      "url": "http://localhost:4333/events",
+      "authProviderType": "google_credentials",
+      "oauth": {
+        "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
+      }
     }
   }
 }
