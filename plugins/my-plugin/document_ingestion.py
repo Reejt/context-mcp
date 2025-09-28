@@ -15,10 +15,9 @@ documents = []
 
 mcp = FastMCP("My MCP Server")
 
-@mcp.tool
-def ingest_file(file_path: str) -> str:
+def ingest_file_raw(file_path: str) -> str:
     try:
-        storage_dir = os.path.join(os.path.dirname(__file__), '..', 'storage')
+        storage_dir = os.path.join(os.path.dirname(__file__), 'document_storage')
         storage_dir = os.path.abspath(storage_dir)
         if not os.path.exists(storage_dir):
             os.makedirs(storage_dir)
@@ -30,3 +29,5 @@ def ingest_file(file_path: str) -> str:
         return f"File '{file_path}' ingested and stored at '{dest_path}'."
     except Exception as e:
         return f"Error ingesting file: {str(e)}"
+
+ingest_file = mcp.tool(ingest_file_raw)

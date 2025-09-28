@@ -6,7 +6,7 @@
     "which": "^5.0.0"
   },
   "scripts": {
-    "dev": "nodemon node_modules/mcp-server/bin/server.js"
+  "dev": "nodemon node_modules/mcp-server/bin/server.js --port 4333"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
